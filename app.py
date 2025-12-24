@@ -2,8 +2,10 @@
 import aws_cdk as cdk
 
 from stacks.s3_stack import S3Stack
+from stacks.sqs_stack import SQSStack
 
 app = cdk.App()
 S3Stack(app, "S3Stack")
+SQSStack(app, "SQSStack")
 
 app.synth()
