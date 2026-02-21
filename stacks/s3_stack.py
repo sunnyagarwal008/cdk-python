@@ -14,7 +14,7 @@ class S3Stack(Stack):
         bucket = s3.Bucket(
             self,
             "sunny-cdk-test-bucket-02",
-            bucket_name="sunny-cdk-test-bucket-03",
+            bucket_name="sunny-cdk-test-bucket-04",
             versioned=True,
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True,
