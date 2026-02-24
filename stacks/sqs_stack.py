@@ -18,7 +18,7 @@ class SQSStack(Stack):
 
         queue = sqs.Queue(
             self,
-            "MyQueue",
+            "MyQueue2",
             queue_name=queue_name,
             visibility_timeout=Duration.seconds(500),
             retention_period=Duration.days(retention_days),
