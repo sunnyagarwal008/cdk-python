@@ -19,3 +19,10 @@ class S3Stack(Stack):
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True,
         )
+
+        # Output the bucket ARN
+        CfnOutput(self, "S3BucketARN",
+            value=bucket.bucket_arn,
+            description="The ARN of the S3 bucket",
+            export_name="MyS3BucketARN", # Name for cross-stack reference
+        )

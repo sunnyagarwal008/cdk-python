@@ -24,3 +24,10 @@ class SQSStack(Stack):
             retention_period=Duration.days(retention_days),
             removal_policy=RemovalPolicy.DESTROY,
         )
+
+        # Output the queue ARN
+        CfnOutput(self, "SQSQueueARN",
+            value=queue.queue_arn,
+            description="The ARN of the SQS queue",
+            export_name="MySQSQueueARN", # Name for cross-stack reference
+        )
