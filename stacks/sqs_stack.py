@@ -3,6 +3,7 @@ from aws_cdk import (
     Duration,
     RemovalPolicy,
     aws_sqs as sqs,
+    CfnOutput, # Import CfnOutput
 )
 from constructs import Construct
 
